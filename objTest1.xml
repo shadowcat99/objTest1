@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="7" inline="false" x="286" y="163">
+  <block type="controls_whileUntil" id="7" inline="false" x="80" y="131">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
       <block type="sensor_button" id="20">
@@ -53,12 +53,96 @@
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="robot_delay" id="130" inline="true">
-                                    <value name="DELAY">
-                                      <block type="math_number" id="131">
-                                        <field name="NUM">200</field>
+                                  <block type="oled_setcursor" id="135" inline="true">
+                                    <value name="STARTX">
+                                      <block type="math_number" id="136">
+                                        <field name="NUM">10</field>
                                       </block>
                                     </value>
+                                    <value name="STARTY">
+                                      <block type="math_number" id="137">
+                                        <field name="NUM">30</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="oled_drawtext" id="138">
+                                        <field name="TEXT">leftSide =</field>
+                                        <next>
+                                          <block type="oled_drawnumber" id="139" inline="true">
+                                            <value name="NUMBER">
+                                              <block type="sensor_object" id="140">
+                                                <field name="OBJECT">LEFTSIDE</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="oled_setcursor" id="141" inline="true">
+                                                <value name="STARTX">
+                                                  <block type="math_number" id="142">
+                                                    <field name="NUM">10</field>
+                                                  </block>
+                                                </value>
+                                                <value name="STARTY">
+                                                  <block type="math_number" id="143">
+                                                    <field name="NUM">40</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="oled_drawtext" id="144">
+                                                    <field name="TEXT">rightSide =</field>
+                                                    <next>
+                                                      <block type="oled_drawnumber" id="145" inline="true">
+                                                        <value name="NUMBER">
+                                                          <block type="sensor_object" id="146">
+                                                            <field name="OBJECT">RIGHTSIDE</field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="oled_setcursor" id="149" inline="true">
+                                                            <value name="STARTX">
+                                                              <block type="math_number" id="150">
+                                                                <field name="NUM">10</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="STARTY">
+                                                              <block type="math_number" id="151">
+                                                                <field name="NUM">50</field>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="oled_drawtext" id="152">
+                                                                <field name="TEXT">Rear =</field>
+                                                                <next>
+                                                                  <block type="oled_drawnumber" id="153" inline="true">
+                                                                    <value name="NUMBER">
+                                                                      <block type="sensor_object" id="154">
+                                                                        <field name="OBJECT">REAR</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="robot_delay" id="147" inline="true">
+                                                                        <value name="DELAY">
+                                                                          <block type="math_number" id="148">
+                                                                            <field name="NUM">200</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
                                   </block>
                                 </next>
                               </block>
